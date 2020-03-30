@@ -6,6 +6,7 @@ import java.awt.*;
 
 public class MainFrame {
 
+         
     public void startFrame(){
         JFrame frame = new JFrame("FrameDemo");
         frame.setSize(800,500);
@@ -14,6 +15,10 @@ public class MainFrame {
         addComponentsToPane(frame.getContentPane());
 
         frame.setVisible(true);
+        final JTextArea textArea=new JTextArea();
+                  
+        frame.getContentPane().add(textArea);
+        
     }
 
     private static void addComponentsToPane(Container pane) {

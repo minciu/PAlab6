@@ -4,6 +4,11 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import java.io.File;
+import javafx.stage.FileChooser;
+
+
+
 public class ControlPanel extends JPanel {
     private DrawingPanel myCanvas;
 
@@ -14,7 +19,9 @@ public class ControlPanel extends JPanel {
         addSaveButton();
         addExitButton();
     }
-
+    
+    
+    
     private void addResetButton() {
         JButton button = new JButton("Reset");
         button.addActionListener(new ActionListener()
@@ -29,15 +36,24 @@ public class ControlPanel extends JPanel {
     }
 
     private void addLoadButton() {
+        
         JButton button = new JButton("Load");
         button.addActionListener(new ActionListener()
         {
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                myCanvas.reset();
+                OpenFile of=new OpenFile();
+                try{
+                of.PickMe();
+                } catch(Exception el){
+                el.printStackTrace();
+                }
+            
+            
             }
-        });
+        }
+        );
         add(button);
     }
 
@@ -48,7 +64,12 @@ public class ControlPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                myCanvas.reset();
+                OpenFile of=new OpenFile();
+                try{
+                of.PickMe();
+                } catch(Exception el){
+                el.printStackTrace();
+                }
             }
         });
         add(button);
