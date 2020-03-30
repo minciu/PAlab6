@@ -1,0 +1,21 @@
+MainFrane are metoda startFrame care: Creaza un cadru, ii aloca o dimensiune, opreste programul atunci cand cadrul este inchis,
+adauga componente inauntru si desigur face cadrul vizibil.
+
+ConfigPanel este situat in partea de sus a cadrului si are 3 laber-uri :Number of Shapes, Number of Sides, Stroke si un buton Draw.
+1 Number of Shapes gestioneaza cate figuri vor fi desenate.
+2 Number of Sides care laturi va avea fiecare figura.
+3 Stroke reprezentarea stilistica a formei(nu da rezultatul dorit).
+4 Cand apasam Draw deseneaza figuri in conformitate cu informatiile primite de la cele 3 laber-uri.
+
+
+DrawingPanel este "pictorul" programului, atunci cand dam clic pe cadru se genereaza un poligon cu 5 laturi si marime,culoare random.
+Are de asemenea conditiile ca sa picteze numai pe "panza"(panelul negru din centru).
+
+ControlPanel este situat in partea de jos si contine cele 4 butoane Load, Save, Reset, Exit. Reset  reseteaza picturile 
+facute,stergandu-le. Save si Load cand sunt apasate deschide si cauta un document in care pot fi salvate respectiv incarcate.
+
+RegularPolygon prezinta tipul de figuri cu care lucram, in cazul de fata figuri geometrice cu cel putin 3 laturi.
+
+
+Utilizand file choser salvam sau incarcam imaginea cu ajutorul clasei OpenFile si a metodei sale PickMe.
+Cream un file chooser si un scaner si cand alegem un fisier il incarca sau salveaza depinzand de buton.
